@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Radical Subscription Zone</title>
+    <style>
+        .marquee-container {
+            background-color: #ff0000;
+            border: 3px double #ff0000;
+            overflow: hidden;
+            padding: 2px 0;
+            width: 100%; /* Make marquee span the full width */
+            
+        }
+marquee {
+            font-size: 1.5em;
+            color: #FFFF00; /* Magenta text */
+            text-shadow: 1px 1px 2px #000000;
+            animation: marquee-animation 40s linear infinite; /* Adjust speed here */
+        }
+        header {
+            position: fixed; /* Make the header fixed */
+            top: 0; /* Position it at the top */
+            left: 0; /* Align it to the left edge */
+            width: 100%; /* Make it span the full width */
+            
+        }
+        body {
+            background-image: url("background.png"); /* Replace with your image */
+            background-size: cover;
+            font-family: 'Comic Sans MS', cursive, sans-serif; /* Iconic 90s font */
+            background-color: #000000; /* Light gray background */
+            color: #000080; /* Dark blue text */
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center; /* Center content horizontally */
+            justify-content: center; /* Center content vertically */
+            min-height: 100vh; /* Ensure full viewport height */
+
+           
+        }
+
+        .container {
+
+            background-color: #00000000; /* White container */
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+            text-align: center;
+        
+        }
+
+        h1 {
+            color: #ff00ff; /* Magenta heading */
+            text-shadow: 2px 2px 4px #000000;
+            font-size: 2em;
+        }
+
+        input[type="email"] {
+            padding: 10px;
+            margin: 10px 0;
+            border: 2px solid #000080;
+            border-radius: 5px;
+            width: 250px;
+        }
+
+        button {
+            background-color: #008000; /* Green button */
+            color: rgb(0, 0, 0);
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: bold;
+            box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+        }
+        button:hover {
+            background-color: #006400;
+        }
+        .bling{
+          animation: blinker 1s linear infinite;
+          color: red;
+        }
+
+        .logo{
+    background-image: url("logos.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain; /* Or cover, or specific dimensions */
+    width: 225px; /* Set width and height to match logo dimensions */
+    height: 200px;
+    text-indent: -9999px; /* Hide the text visually */
+    overflow: hidden; /* Hide any overflowing text */
+    margin: 20% auto;
+}
+
+
+ footer {
+          text-align: center;
+          margin-top: auto;
+         
+          
+        }
+        @keyframes marquee-animation {
+            0%   { transform: translate3d(0, 0, 0); }
+            100% { transform: translate3d(-100%, 0, 0); }
+        }
+
+        @keyframes blinker {
+          50% {
+            opacity: 0;
+          }
+        }
+
+          /* Basic mobile styles */
+          @media (max-width: 600px) {
+            th, td {
+                font-size: 14px; /* Smaller font on mobile */
+                padding: 6px;
+            }
+        }
+    </style>
+</head>
+<header>
+        <div class="marquee-container">
+            <marquee behavior="scroll" direction="left" scrollamount="10">Forever Two Wings Forever Two Wings Forever Two Wings Forever Two Wings Forever Two Wings Forever Two Wings Forever Two Wings</marquee>
+        </div>
+    </header>
+<body>
+    
+    <div class="container">
+        <section id="home">
+            <h1 class="logo">Vole</h1>
+  
+        </section>
+        <form action="#" method="post">
+            <input type="email" id="email" name="email" placeholder="Enter your email address" required><br>
+            <button type="submit">Subscribe Now!</button>
+        </form>
+        <img src="200.webp" alt="Dancing Hamster" width="150"> <br>
+        
+    </div>
+    <footer>
+        <div class="marquee-container">
+            <marquee behavior="scroll" direction="left" scrollamount="10">Forever Two Wings Forever Two Wings Forever Two Wings Forever Two Wings Forever Two Wings Forever Two Wings Forever Two Wings</marquee>
+        </div>
+    </footer>
+</body>
+
+</html>

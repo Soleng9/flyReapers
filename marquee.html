@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>90s Marquee Example</title>
+    <style>
+        body {
+            font-family: 'Comic Sans MS', cursive, sans-serif;
+            background-color: #c0c0c0;
+            color: #000080;
+            margin: 0;
+            display: flex; /* Enable flexbox for layout */
+            flex-direction: column; /* Stack elements vertically */
+            min-height: 100vh; /* Ensure body takes full viewport height */
+        }
+
+        .marquee-container {
+            background-color: #ffffff;
+            border: 3px double #000080;
+            overflow: hidden;
+            padding: 5px 0;
+            width: 100%; /* Make marquee span the full width */
+        }
+
+        marquee {
+            font-size: 1.5em;
+            color: #ff00ff;
+            text-shadow: 1px 1px 2px #000000;
+            animation: marquee-animation 15s linear infinite;
+        }
+
+        @keyframes marquee-animation {
+            0%   { transform: translate3d(0, 0, 0); }
+            100% { transform: translate3d(-100%, 0, 0); }
+        }
+
+        main {
+            flex: 1; /* Allow main content to take up available space */
+            padding: 20px; /* Add some padding to the main content */
+        }
+
+        header, footer {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="marquee-container">
+            <marquee behavior="scroll" direction="left" scrollamount="10">Forever Two Wings Forever Two Wings Forever Two Wings Forever Two Wings Forever Two Wings Forever Two Wings Forever Two Wings</marquee>
+        </div>
+        <h1>Website Title</h1>
+        <p>Some header content here.</p>
+    </header>
+
+    <main>
+        <p>Main content of your website goes here. This content will now push the footer to the bottom of the page, even if it's short.</p>
+        <p>You can add more content here to see how the layout adjusts.</p>
+         <p>You can add more content here to see how the layout adjusts.</p>
+         <p>You can add more content here to see how the layout adjusts.</p>
+         <p>You can add more content here to see how the layout adjusts.</p>
+         <p>You can add more content here to see how the layout adjusts.</p>
+    </main>
+
+    <footer>
+        <div class="marquee-container">
+            <marquee behavior="scroll" direction="left" scrollamount="10">Forever Two Wings Forever Two Wings Forever Two Wings Forever Two Wings Forever Two Wings Forever Two Wings Forever Two Wings</marquee>
+        </div>
+        <p>&copy; 2023 My Website</p>
+    </footer>
+
+</body>
+</html>
