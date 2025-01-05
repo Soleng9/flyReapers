@@ -136,14 +136,30 @@ marquee {
             <h1 class="logo">Vole</h1>
   
         </section>
-        <form action="#" method="post">
+
+        <form name="submit-to-google-sheet">
             <input type="email" id="email" name="email" placeholder="Enter your email address" required><br>
             <button type="submit">Subscribe Now!</button>
+        
         </form>
         <img src="200.webp" alt="Dancing Hamster" width="150"> <br>
         
     </div>
-    <footer>
+    
+
+    <script>
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbzAAL0za2GtDHnqUE3Y_ApwziL26qTJgFo_u3fREUCk9WBiTR6xNwN6u_Y4kj2EZYPv/exec'
+        const form = document.forms['submit-to-google-sheet']
+      
+        form.addEventListener('submit', e => {
+          e.preventDefault()
+          fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+            .then(response => console.log('Success!', response))
+            .catch(error => console.error('Error!', error.message))
+            form.reset()
+        })
+      </script>
+<footer>
         <div class="marquee-container">
             <marquee behavior="scroll" direction="left" scrollamount="10">Forever Two Wings Forever Two Wings Forever Two Wings Forever Two Wings Forever Two Wings Forever Two Wings Forever Two Wings</marquee>
         </div>
